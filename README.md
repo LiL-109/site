@@ -1,7 +1,6 @@
-# site
-Main site
+### Lil Site
 
-
-Стек:
-html
+stack:
+html 
 css
+javascript
