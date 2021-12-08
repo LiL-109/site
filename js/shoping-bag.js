@@ -17,20 +17,20 @@ function createItem(data) {
     item.className = "bag-item";
     item.innerHTML = `  <div class="bag-item-img">
                             <div class="bag-item-img-overlay">
-                                <span>View item</span>
+                                <span>Подивитись</span>
                             </div>
                             <img src="${data.imgSrc}" alt="${data.title}">
                         </div>
                         <div class="bag-item-details">
                             <h4 class="bag-item-title">Ваше замовлення</h4>
                                 <span class="bag-item-price">${data.price}</span>
-                                <span class="bag-item-color">Color: ${data.color}</span>
-                                <span class="bag-item-size">Size: ${data.size}</span>
-                                <span class="bag-item-quantity">Quantity:
+                                <span class="bag-item-color">Колір: ${data.color}</span>
+                                <span class="bag-item-size">Розмір: ${data.size}</span>
+                                <span class="bag-item-quantity">Кількість:
                                 <img class="minus" src="images/minus.png" alt="Quantyti Minus">
                                 <span class="current-quantity">${data.quantity}</span>
                                 <img class="plus" src="images/plus.png" alt="Quantyti Plus"></span>
-                            <button class="remove-item">Remove item</button>
+                            <button class="remove-item">Видалити предмет</button>
                         </div>`;
     return item;
 }

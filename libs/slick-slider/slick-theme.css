@@ -1,4 +1,4 @@
-/* Arrows */
+
 .slick-prev,
 .slick-next {
     font-size: 0;
@@ -23,7 +23,7 @@
     background: url(../../images/slider-next.jpg);
 }
 
-/* Dots */
+
 .slick-dots {
     position: absolute;
     bottom: 37px;

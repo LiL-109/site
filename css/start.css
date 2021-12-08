@@ -1,4 +1,4 @@
-/* Default */
+
 
 *,
 *::before,
@@ -58,7 +58,7 @@ ul {
     }
 }
 
-/* Custom */
+
 
 body {
     background-color: #fff;
@@ -67,9 +67,7 @@ body {
     letter-spacing: 0.03em;
 }
 
-/* Main start */
 
-/* Slider start */
 
 .slider {
     height: 850px;
@@ -95,7 +93,6 @@ body {
     background-size: 100% 100%;
 }
 
-/* Slider media */
 @media screen and (max-width:1024px) {
 
     .slider,
@@ -144,9 +141,7 @@ body {
     }
 }
 
-/* Slider end */
 
-/* Banner start */
 
 .banner {
     display: -webkit-box;
@@ -174,7 +169,7 @@ body {
     background-size: 100% 100%;
 }
 
-/* Banner media */
+
 @media screen and (max-width:1024px) {
     .banner {
         height: 251px;
@@ -211,9 +206,7 @@ body {
     }
 }
 
-/* Banner end */
 
-/* Arrivals start */
 
 .arrivals {
     padding: 140px 0 80px;
@@ -310,7 +303,7 @@ body {
 
 .card-price::before,
 .card-discount-price::before {
-    content: "£";
+    content: "₴";
 }
 
 .card-has-new,
@@ -336,7 +329,7 @@ body {
     border-color: #f14a58;
 }
 
-/* Arrivals media */
+
 @media screen and (max-width:1024px) {
     .arrivals-wrapp {
         max-width: 688px;
@@ -410,6 +403,3 @@ body {
     }
 }
 
-/* Arrivals end */
-
-/* Main end */

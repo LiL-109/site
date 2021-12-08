@@ -22,15 +22,14 @@ window.addEventListener("DOMContentLoaded", function () {
     function sortByDate(a, b) {
         return new Date(b.dateAdded) - new Date(a.dateAdded);
     }
-    data.sort(sortByDate);
-    // Создание карточки
+   
     function createItem(data) {
         let item = document.createElement("div");
         item.className = "card";
         item.setAttribute("data-id", data.id);
         item.innerHTML = `<div class="card-img">
                           <div class="card-img-overlay">
-                          <span>View item</span>
+                          <span>Подивитись</span>
                           </div>
                           <img src="${data.thumbnail}" alt="Only Skinny Jeans">
                           </div>
@@ -40,18 +39,22 @@ window.addEventListener("DOMContentLoaded", function () {
         return item;
     }
 
-    // Вывод карточке в зависимости от екрана
+    
     if (document.body.clientWidth > 1024) {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 4; i++) {
             catalog.appendChild(createItem(data[i]));
         }
     } else if (document.body.clientWidth > 768 && document.body.clientWidth <= 1024) {
         for (let i = 0; i < 3; i++) {
             catalog.appendChild(createItem(data[i]));
         }
+    } else if (document.body.clientWidth <= 768) {
+        for (let i = 0; i < 2; i++) {
+            catalog.appendChild(createItem(data[i]));
+        }
     };
 
-    // Вывод карточке в зависимости от екрана при resize
+   
     window.addEventListener("resize", function () {
         catalog.innerHTML = "";
         if (document.body.clientWidth > 1024) {
@@ -66,7 +69,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // Запомнить товар по которому был клик
     catalog.addEventListener("click", function (e) {
         let target = e.target;
         while (target != this) {

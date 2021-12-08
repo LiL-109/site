@@ -1,4 +1,4 @@
-/* Header start */
+
 .header-wrap,
 .header-nav {
     max-width: 1180px;
@@ -197,7 +197,7 @@
     color: #a8a8a8;
 }
 
-/* Header media */
+
 @media screen and (max-width:1024px) {
     .page-header {
         margin-bottom: 25px;
@@ -384,9 +384,7 @@
     }
 }
 
-/* Header end */
 
-/* Footer start */
 .footer-top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -557,7 +555,7 @@
     display: none;
 }
 
-/* Footer media */
+
 @media screen and (max-width:1024px) {
     .footer-top {
         padding: 0 40px;
@@ -713,4 +711,3 @@
     }
 }
 
-/* Footer end */

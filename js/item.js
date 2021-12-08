@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function () {
     let data = window.catalog;
     let bagItem = document.getElementsByClassName("item")[0];
-    // Создание товара
+   
 
     function createItem(data) {
         let item = document.querySelector(".item");
@@ -24,11 +24,13 @@ window.addEventListener("DOMContentLoaded", function () {
                          ${data.colors.map(color => `<li class="item-color">${color}</li>`).join(" ")}
                          </ul>
                          <button class="toBagBtn">Додати в кошик</button>
+                         <br></br>
+                         <button class="to3dModel">3D модель</button>
                          </div>`;
         return item;
     };
 
-    // Вывод товара id которого хранится в localStorage
+ 
     for (let i = 0; i < data.length; i++) {
         if (localStorage.getItem("itemId") === data[i].id) {
             createItem(data[i]);
@@ -39,7 +41,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let itemSizes = document.getElementsByClassName("item-sizes")[0];
     let itemColors = document.getElementsByClassName("item-colors")[0];
 
-    // Thumbnails
+   
     itemPreview.addEventListener("click", function (e) {
         let target = e.target;
         if (!target.classList.contains("item-preview-small")) return;
@@ -53,7 +55,7 @@ window.addEventListener("DOMContentLoaded", function () {
         target.parentElement.classList.add("active");
     });
 
-    // Выбор размера
+
     itemSizes.addEventListener("click", function (e) {
         let target = e.target;
         if (!target.classList.contains("item-size")) return;
@@ -64,7 +66,7 @@ window.addEventListener("DOMContentLoaded", function () {
         target.classList.add("active");
     });
 
-    // Выбор цвета
+  
     itemColors.addEventListener("click", function (e) {
         let target = e.target;
         if (!target.classList.contains("item-color")) return;
@@ -75,9 +77,14 @@ window.addEventListener("DOMContentLoaded", function () {
         target.classList.add("active");
     });
 
-    // Добавление выбраного товара в LocalStorage
+   
     bagItem.addEventListener("click", function (e) {
         let target = e.target;
+        if (target.classList.contains("to3dModel")) {
+            location.href = "pornhub.com";
+            return;
+        };
+
         if (!target.classList.contains("toBagBtn")) return;
         let title = this.getElementsByClassName("item-title")[0].innerHTML;
         let price = this.getElementsByClassName("item-price")[0].innerHTML;

@@ -1,4 +1,4 @@
-/* Default */
+
 
 *,
 *::before,
@@ -58,7 +58,7 @@ ul {
     }
 }
 
-/* Custom */
+
 
 body {
     background-color: #fff;
@@ -67,7 +67,7 @@ body {
     letter-spacing: 0.03em;
 }
 
-/* Main start */
+
 .toCatalog {
     padding: 25px 90px;
     border-top: 1px solid #e5e5e5;
@@ -101,7 +101,7 @@ body {
     }
 }
 
-/* Item details start */
+
 .item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -120,19 +120,21 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 50%;
+    width: 45%;
 }
 
 .item-preview-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 130px;
+    height: 230px;
 }
 
 .item-preview-big {
-    width: 590px;
+    /* width: 190px; */
     height: 394px;
+    margin: 10px auto 20px;
+    display: block;
 }
 
 .item-preview-small-wrap {
@@ -188,7 +190,7 @@ body {
 }
 
 .item-price::before {
-    content: "£";
+    content: "₴";
 }
 
 .item-sizes,
@@ -236,6 +238,7 @@ body {
     margin-left: 43px;
 }
 
+
 .toBagBtn {
     display: block;
     padding: 24px 105px;
@@ -271,7 +274,43 @@ body {
     }
 }
 
-/* Item media */
+
+.to3dModel {
+    display: block;
+    padding: 24px 105px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    font-family: 'Open sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
+    margin: 0 auto;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.to3dModel:hover {
+    cursor: pointer;
+    color: #f14a58;
+    border-color: #f14a58;
+}
+
+@media screen and (max-width:1024px) {
+    .to3dModel {
+        padding: 24px 76px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .to3dModel {
+        padding: 21px 61px;
+        font-size: 18px;
+    }
+}
+
+
 @media screen and (max-width:1024px) {
     .item {
         -webkit-box-orient: vertical;
@@ -429,9 +468,7 @@ body {
     }
 }
 
-/* Item details end */
 
-/* Banner start */
 .item-banner {
     height: 384px;
     background: url(../images/banner-desktop.png) no-repeat;
@@ -455,5 +492,3 @@ body {
     }
 }
 
-/* Banner end */
-/* Main end */
